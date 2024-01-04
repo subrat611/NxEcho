@@ -4,7 +4,7 @@ const HeroSection = () => {
       <div>
         <div className="flex justify-center items-center h-screen">
           <div className="h-[50vh] w-11/12 md:w-3/6 flex justify-center relative">
-            <div className="absolute -top-[200px] bg-gradient-to-r from-violet-700 to-green-700 w-[50vw] h-[50vh] blur-[500px] opacity-40 rounded-full"></div>
+            <div className="absolute -top-[200px] bg-gradient-to-r from-violet-700 to-green-700 w-[50vw] h-[50vh] blur-[230px] opacity-30 rounded-full"></div>
             <div className="font-semibold text-xl text-center capitalize md:text-5xl md:leading-[4rem]">
               <div className="text-base font-medium flex justify-center mb-3 cursor-default">
                 <div className="flex items-center bg-gray-700/50 px-5 py-1 rounded-full w-fit">
