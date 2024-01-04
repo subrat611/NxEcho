@@ -8,7 +8,7 @@ const Header = () => {
 
         <div className="flex items-center">
           <a href="https://google.com">
-            <IconBuddyGithubIcon classname="h-5 me-4" />
+            <IconBuddyGithubIcon classname="h-5 me-4 animate-pulse" />
           </a>
           <button className="bg-violet-600 hover:bg-violet-700 px-3 py-1 rounded-md font-medium">
             Sign in
