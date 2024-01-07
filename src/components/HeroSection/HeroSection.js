@@ -17,7 +17,7 @@ const HeroSection = () => {
               <span className="px-1">Discover</span>
               <div className="h-7 md:h-16 overflow-hidden">
                 <span className="block text-center bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-green-300 animate-spin_words">
-                  Discussions
+                  Conversations
                 </span>
                 <span className="block text-center bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-green-300 animate-spin_words">
                   Communitites
