@@ -1,4 +1,5 @@
 import { IconBuddyGithubIcon } from "@/assets/icon";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -7,6 +8,17 @@ const Header = () => {
         <p className="font-semibold tracking-wider text-lg">NxEcho</p>
 
         <div className="flex items-center">
+          <div className="me-3 text-gray-300">
+            <Link href="/" className="me-3 hover:text-gray-50">
+              Home
+            </Link>
+            <Link href="/events" className="me-3 hover:text-gray-50">
+              Events
+            </Link>
+            <Link href="/feed" className="me-3 hover:text-gray-50">
+              Feed
+            </Link>
+          </div>
           <a href="https://google.com">
             <IconBuddyGithubIcon classname="h-5 me-4 animate-pulse" />
           </a>
