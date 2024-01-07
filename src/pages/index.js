@@ -8,7 +8,7 @@ export default function Home() {
     <main className="relative h-full bg-[#151718]">
       <Header />
       <HeroSection />
-      <PlacementSection />
+      {/* <PlacementSection /> */}
     </main>
   );
 }
