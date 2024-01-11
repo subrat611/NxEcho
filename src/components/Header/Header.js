@@ -33,7 +33,7 @@ const Header = () => {
               Feed
             </Link>
           </div>
-          <a href="https://google.com">
+          <a href="https://github.com/subrat611/NxEcho" target="_blank">
             <IconBuddyGithubIcon classname="h-5 me-4 animate-pulse" />
           </a>
           {!userStatus ? (
