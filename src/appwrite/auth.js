@@ -16,7 +16,7 @@ class AuthService {
 
       if (!newAccount) return newAccount;
 
-      return this.loginUser({ email, password });
+      this.loginUser({ email, password });
     } catch (error) {
       console.log("Appwrite serive(SIGN UP): ERROR", error);
     }

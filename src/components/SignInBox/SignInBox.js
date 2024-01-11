@@ -17,16 +17,19 @@ const SignInBox = () => {
 
   const router = useRouter();
 
-  const loginStore = useAuthStore((state) => state.loginUser);
+  const loginStore = useAuthStore((state) => state.login);
 
   const signInHandler = async (data) => {
     try {
-      const session = appwriteAuth.loginUser(data);
-      if (session) {
-        const userData = appwriteAuth.getCurrentUser();
+      const session = await appwriteAuth.loginUser(data);
 
-        if (userData) loginStore(userData);
-        router.push("/");
+      if (session) {
+        const userData = await appwriteAuth.getCurrentUser();
+
+        if (userData) {
+          loginStore(userData);
+          router.push("/");
+        }
       }
     } catch (err) {}
   };

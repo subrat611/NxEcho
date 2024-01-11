@@ -9,7 +9,7 @@ import appwriteService from "@/appwrite/service";
 import appwriteAuth from "@/appwrite/auth";
 
 const Header = () => {
-  const userStatus = useAuthStore((state) => state.staus);
+  const userStatus = useAuthStore((state) => state.status);
   const signoutStore = useAuthStore((state) => state.logout);
 
   const signoutHandler = () => {
