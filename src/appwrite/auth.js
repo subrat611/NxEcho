@@ -18,8 +18,7 @@ class AuthService {
 
       return this.loginUser({ email, password });
     } catch (error) {
-      console.log(error);
-      throw error;
+      console.log("Appwrite serive(SIGN UP): ERROR", error);
     }
   }
 
@@ -30,8 +29,7 @@ class AuthService {
     try {
       return await account.createEmailSession(email, password);
     } catch (error) {
-      console.log(error);
-      throw error;
+      console.log("Appwrite serive(LOG IN): ERROR", error);
     }
   }
 
@@ -40,7 +38,7 @@ class AuthService {
     try {
       return await account.get();
     } catch (error) {
-      throw error;
+      console.log("Appwrite serive(GET CURRENT USER): ERROR", error);
     }
   }
 
@@ -49,7 +47,7 @@ class AuthService {
     try {
       return await account.deleteSession("current");
     } catch (error) {
-      throw error;
+      console.log("Appwrite serive(LOG OUT): ERROR", error);
     }
   }
 }
