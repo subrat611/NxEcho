@@ -1,19 +1,17 @@
 import { Account, Client, Databases, Storage } from "appwrite";
 
 export const appwriteConfig = {
-  APPWRITE_ENDPOINT: String(process.env.NEXT_PUBLIC_APPWRITE_ENDPOINT),
-  APPWRITE_PROJECT_ID: String(process.env.NEXT_PUBLIC_APPWRITE_PROJECT_ID),
-  APPWRITE_DATABASE_ID: String(process.env.NEXT_PUBLIC_APPWRITE_DATABASE_ID),
-  APPWRITE_FEEDS_COLLECTION_ID: String(
-    process.env.NEXT_PUBLIC_APPWRITE_FEEDS_COLLECTION_ID
-  ),
-  APPWRITE_BUCKET_ID: String(process.env.NEXT_PUBLIC_APPWRITE_BUCKET_ID),
+  url: process.env.NEXT_PUBLIC_APPWRITE_ENDPOINT,
+  projectId: process.env.NEXT_PUBLIC_APPWRITE_PROJECT_ID,
+  databaseId: process.env.NEXT_PUBLIC_APPWRITE_DATABASE_ID,
+  feedCollectionId: process.env.NEXT_PUBLIC_APPWRITE_FEEDS_COLLECTION_ID,
+  bucketId: process.env.NEXT_PUBLIC_APPWRITE_BUCKET_ID,
 };
 
 export const appwriteClient = new Client();
 
-appwriteClient.setEndpoint(appwriteConfig.APPWRITE_ENDPOINT);
-appwriteClient.setProject(appwriteClient.APPWRITE_PROJECT_ID);
+appwriteClient.setEndpoint(appwriteConfig.url);
+appwriteClient.setProject(appwriteConfig.projectId);
 
 export const account = new Account(appwriteClient);
 export const databases = new Databases(appwriteClient);
