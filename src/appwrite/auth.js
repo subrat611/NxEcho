@@ -42,6 +42,14 @@ class AuthService {
     }
   }
 
+  async getCurrentSession() {
+    try {
+      return await account.getSession("current");
+    } catch (error) {
+      console.log("Appwrite serive(GET CURRENT SESSION): ERROR", error);
+    }
+  }
+
   // DELETE SESSION OF AN USER
   async logout() {
     try {
