@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.post-scroll::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Customize scrollbar track */
+.post-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Adjust background color as needed */
+}
+
+/* Customize scrollbar handle */
+.post-scroll::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-color);
+}
+
+/* Optionally, you can adjust the scrollbar corner */
+.post-scroll::-webkit-scrollbar-corner {
+  background: #ffffff; /* Adjust background color as needed */
+}
