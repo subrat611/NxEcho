@@ -1,5 +1,6 @@
 import { IconBuddyGithubIcon } from "@/assets/icon";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 // zustand
 import useAuthStore from "@/store/useAuthStore";
@@ -12,12 +13,17 @@ const Header = () => {
   const userStatus = useAuthStore((state) => state.status);
   const signoutStore = useAuthStore((state) => state.logout);
 
+  const router = useRouter();
+
   const signoutHandler = () => {
-    appwriteAuth.logout().then(() => signoutStore());
+    appwriteAuth.logout().then(() => {
+      signoutStore();
+      router.push("/signin");
+    });
   };
 
   return (
-    <header className="absolute top-0 left-0 w-full h-max border-b border-b-gray-50/10">
+    <header className="absolute top-0 left-0 w-full h-max border-b border-b-gray-50/10 z-10">
       <div className="w-full px-5 xl:mx-auto xl:w-[1128px] text-white flex items-center justify-between py-3">
         <p className="font-semibold tracking-wider text-lg">NxEcho</p>
 
